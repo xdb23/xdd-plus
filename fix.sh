@@ -50,10 +50,15 @@
  echo "127.0.0.1 cdn.jsdelivr.net" | tee -a /etc/hosts
  fi
  
-result=$(grep 'smiek.tk' /etc/hosts)
-if [ "$reusult" = "" ]
-then
-$ echo "127.0.0.1 smiek.tk" | sudo tee -a /etc/hosts
-fi
+ if [ "$(grep 'smiek.tk' /etc/hosts)" = "" ];
+ then
+ echo "127.0.0.1 smiek.tk" | tee -a /etc/hosts
+ fi
+ 
+# result=$(grep 'smiek.tk' /etc/hosts)
+# if [ "$reusult" = "" ]
+# then
+# $ echo "127.0.0.1 smiek.tk" | sudo tee -a /etc/hosts
+# fi
 
 
